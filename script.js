@@ -26,7 +26,7 @@ function checkLogin(event) {
   // Verificar se o usuário está logado
   function checkIfLoggedIn() {
     if (localStorage.getItem('loggedIn') === 'true') {
-      window.location.href = 'conteudo.html';
+      window.location.href = 'youtube.html';
     }
   }
   
