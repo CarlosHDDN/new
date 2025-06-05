@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Conteúdo</title>
+</head>
+<body>
+  <h1>Bem-vindo, <span id="user"></span>!</h1>
+  <p>Você está logado com sucesso.</p>
+  <button onclick="logout()">Sair</button>
+
+  <script>
+    // Exibir o nome do usuário
+    document.getElementById('user').textContent = localStorage.getItem('username');
+
+    // Função para fazer logout
+    function logout() {
+      localStorage.removeItem('loggedIn');
+      localStorage.removeItem('username');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
